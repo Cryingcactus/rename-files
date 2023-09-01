@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const regex = /^[A-Za-z]{3}__([A-Za-z]{3})_([0-9]+)__([0-9]+)_\.jpg\.txt/;
+const regex = /^[A-Za-z]{3}__([A-Za-z]{3})_([0-9]+)__([0-9]+)_\.jpg/;
 const month = {
   Jan: "01",
   Feb: "02",
