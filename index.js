@@ -1,6 +1,8 @@
 const fs = require("fs");
 
-const regex = /^[A-Za-z]{3}__([A-Za-z]{3})_([0-9]+)__([0-9]+)_\.jpg/;
+const regex =
+  /^[A-Za-z\_]*[A-Za-z]{3}__([A-Za-z]{3})_([0-9]+)__([0-9]+)_\.jpg$/;
+
 const month = {
   Jan: "01",
   Feb: "02",
@@ -24,6 +26,7 @@ if (process.argv.length < 3) {
   const targetDir = process.argv[2];
   console.log("Target: ", targetDir);
   fs.readdir(targetDir, (err, files) => {
+    console.log(files);
     files.forEach((file) => {
       const match = file.match(regex);
       if (match) {
