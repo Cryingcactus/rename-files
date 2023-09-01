@@ -29,9 +29,9 @@ if (process.argv.length < 3) {
     files.forEach((file) => {
       const match = file.match(regex);
       if (match) {
-        const newName = `${match[3]}-${month[match[1]]}-${match[2]}-${
-          match[0]
-        }`;
+        const newName = `${match[3]}-${month[match[1]]}-${
+          match[2].length < 2 ? `0${match[2]}` : match[2]
+        }-${match[0]}`;
         const currentFile = `${targetDir}\\${file}`;
         const NewFile = `${targetDir}\\${newName}`;
         fs.rename(currentFile, NewFile, (err) => {
