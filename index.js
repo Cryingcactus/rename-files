@@ -26,7 +26,6 @@ if (process.argv.length < 3) {
   const targetDir = process.argv[2];
   console.log("Target: ", targetDir);
   fs.readdir(targetDir, (err, files) => {
-    console.log(files);
     files.forEach((file) => {
       const match = file.match(regex);
       if (match) {
