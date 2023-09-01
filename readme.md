@@ -10,4 +10,4 @@ Run the project by `npm start "<path to the files to be renamed>"`
 
 Running this program will change files to yyyy-mm-dd-rest_of_file_name, but only if it can find the date in the files names
 
-example: some_named_photo_Fri\_\_Aug_11\_\_1920\_.jpg > 1920-08-11-The_Daily_News_Leader_Fri\_\_Aug_11\_\_1920\_.jpg
+example: some_named_photo_Fri\_\_Aug_11\_\_1920\_.jpg > some_named_photo_Fri\_\_Aug_11\_\_1920\_.jpg
